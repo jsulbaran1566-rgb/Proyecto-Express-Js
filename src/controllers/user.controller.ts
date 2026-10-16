@@ -37,9 +37,10 @@ export class UserController {
     });
   };
 
-  public static deleteUser = (req: Request, res: Response): void => {
+  public static deactivateUser = (req: Request, res: Response): void => {
     const { id } = req.params;
-    // TODO: eliminación lógica (marcar como inactivo/eliminado); responder 204 o 404.
+    // TODO: eliminación lógica: marcar al usuario como inactivo/eliminado (sin borrar el registro);
+    // responder 200 con el usuario actualizado o 404.
     res.status(501).json({
       success: false,
       message: `La eliminación lógica del usuario ${id} todavía no está implementada.`
